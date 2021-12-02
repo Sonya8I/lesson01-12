@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x,y,a,b;
+	a=2;
+	b=0;
+	cin>>x>>y;
+	while (abs(x+y!=0)){
+		if (abs(x-y)%2!=0 && (a==2 or abs(x-y)<a)){
+			a=abs(x-y);
+			}
+		if (x>=y){
+			b+=x;
+			}
+		else{
+			b+=y;
+			}
+		cin>>x>>y;
+	}
+	if (b%2==0){
+		b-=a;
+	}
+	cout<<b;
+	return 0;
+}
